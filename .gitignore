@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+/.vs/CloudDICOMViewer/FileContentIndex
+/.vs/CloudDICOMViewer/v17
+/.vs
+/backend/DICOMProcessor/.vs/DICOMProcessor
+/frontend/.vscode
