@@ -1,0 +1,24 @@
+name: CI/CD Pipeline for CloudDICOMViewer
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: |
+          cd frontend/clouddicomviewer-frontend
+          npm install
+      - name: Build Angular app
+        run: |
+          cd frontend/clouddicomviewer-frontend
+          npm run build
