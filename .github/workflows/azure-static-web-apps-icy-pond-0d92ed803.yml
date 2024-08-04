@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: '18.x' # Use Node.js 18.x to meet the Angular CLI requirements
 
+      - name: Verify Node.js Version
+        run: node -v
+
       - name: Install Dependencies
         run: |
           cd frontend
